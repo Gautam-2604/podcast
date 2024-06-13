@@ -5,14 +5,18 @@ import { Textarea } from './ui/textarea'
 import { Button } from './ui/button'
 import { useState } from 'react'
 
-const useGeneratePodacast = (props: GeneratePodcastProps)=>{
+const useGeneratePodacast = ({setAudio, voiceType, voicePrompt, setAudioStorageId}: GeneratePodcastProps)=>{
 
     //login for podcast generation
     const [isGenerating, setIsGenerating] = useState(false)
 
     const generatePodcast = async()=>{
         setIsGenerating(true)
-        
+        setAudio('');
+        if(!voicePrompt){
+             return setIsGenerating(false);
+        }
+
         
 
     }
