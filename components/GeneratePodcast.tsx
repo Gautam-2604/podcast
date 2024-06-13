@@ -17,6 +17,18 @@ const useGeneratePodacast = ({setAudio, voiceType, voicePrompt, setAudioStorageI
              return setIsGenerating(false);
         }
 
+        try {
+            const response = await getPodcastAudio({
+                voice: voiceType,
+                input: voicePrompt
+            })
+        } catch (error) {
+            console.log('Error in generating podcast',error);
+            
+            
+        }
+
+
         
 
     }
