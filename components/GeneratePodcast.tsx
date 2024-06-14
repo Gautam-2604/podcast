@@ -27,10 +27,8 @@ const useGeneratePodacast = ({setAudio, voiceType, voicePrompt, setAudioStorageI
         setIsGenerating(true)
         setAudio('');
         if(!voicePrompt){
-             toast({
-                title: "Please provide a voice",
-                variant:"destructive"
-             })
+             console.log("Please add voice type");
+             
         }
 
         try {
