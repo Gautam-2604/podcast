@@ -130,7 +130,14 @@ const createPodcast = ()=>{
           setAudioDuration={setAudioDuration}
 
           />
-          <GenerateThumbnail />
+          <GenerateThumbnail
+          setImage={setImageUrl}
+          setImageStorageId={setImageStorageId}
+          image={imageUrl}
+          imagePrompt={imagePrompt}
+          setImagePrompt={setImagePrompt}
+
+          />
           <div className="mt-10 w-full">
             <Button type="submit" className="text-16 bg-orange-1 w-full py-4 font-extrabold text-white-1 transition-all hover:bg-black-1 duration-500">
               {isSubmitting?('Submitting ...'):('Submit and publish Podcast')}
