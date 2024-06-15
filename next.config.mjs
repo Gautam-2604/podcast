@@ -8,6 +8,9 @@ const nextConfig = {
             },{
                 protocol:'https',
                 hostname:'animated-elk-289.convex.cloud'
+            },{
+                protocol:'https',
+                hostname:'img.clerk.com'
             }
         ]
     }

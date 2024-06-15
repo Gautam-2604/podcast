@@ -2,14 +2,9 @@
 import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import { PodcastCardProps } from '@/types'
 
-const PodcastCard = ({imgUrl, title, description, podcastId}:{
-    //comments added
-    imgUrl:string,
-    title: string,
-    description: string,
-    podcastId: number
-}) => {
+const PodcastCard = ({imgUrl, title, description, podcastId}:PodcastCardProps) => {
     const router = useRouter()
 
   const handleViews = () => {
