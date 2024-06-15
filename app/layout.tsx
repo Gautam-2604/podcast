@@ -4,6 +4,7 @@ import "./globals.css";
 
 import ConvexClerkProvider from "./providers/ConvexClerkProvider";
 import { Toaster } from "@/components/ui/toaster"
+import AudioProvider from "./providers/AudioProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,14 +22,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ConvexClerkProvider>
     <html lang="en">
+      <AudioProvider>
       <body className={inter.className}>
-        <ConvexClerkProvider>
+        
         {children}
-        </ConvexClerkProvider>
+        
         
         </body>
+        </AudioProvider>
 
     </html>
+    </ConvexClerkProvider>
   );
 }
