@@ -9,6 +9,7 @@ import ProfileCard from "@/components/ProfileCard";
 import { api } from "@/convex/_generated/api";
 
 const ProfilePage = ({
+  //comments
   params,
 }: {
   params: {
